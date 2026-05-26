@@ -35,6 +35,10 @@ form {
   box-shadow: 0 24px 70px rgba(36, 61, 54, 0.1);
 }
 
+.hidden-field {
+  display: none;
+}
+
 label {
   display: grid;
   gap: 8px;

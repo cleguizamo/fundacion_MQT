@@ -12,8 +12,17 @@
     </address>
   </div>
 
-  <form name="contacto-mqt" method="POST" data-netlify="true">
+  <form
+    name="contacto-mqt"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
     <input type="hidden" name="form-name" value="contacto-mqt" />
+    <label class="hidden-field">
+      No llenar
+      <input name="bot-field" autocomplete="off" />
+    </label>
     <label>
       Nombre
       <input name="nombre" type="text" autocomplete="name" required />
@@ -21,6 +30,10 @@
     <label>
       Correo
       <input name="correo" type="email" autocomplete="email" required />
+    </label>
+    <label>
+      Teléfono
+      <input name="telefono" type="tel" autocomplete="tel" />
     </label>
     <label>
       Quiero apoyar como

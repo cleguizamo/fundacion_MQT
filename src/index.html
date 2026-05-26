@@ -12,10 +12,12 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <form name="contacto-mqt" method="POST" data-netlify="true" hidden>
+  <form name="contacto-mqt" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contacto-mqt">
+    <input name="bot-field">
     <input name="nombre" type="text">
     <input name="correo" type="email">
+    <input name="telefono" type="tel">
     <select name="tipo-apoyo">
       <option>Voluntario</option>
       <option>Donante</option>
