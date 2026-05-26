@@ -1,0 +1,41 @@
+<section class="contact section" id="contacto" appRevealOnScroll>
+  <div class="contact-copy">
+    <div class="section-kicker">Contacto</div>
+    <h2>Hablemos de una acción concreta para transformar una comunidad.</h2>
+    <p>
+      Cuéntanos cómo quieres participar. Recibimos propuestas de voluntarios, donantes, aliados
+      institucionales y comunidades que buscan acompañamiento.
+    </p>
+    <address>
+      Fundación Manos que Transforman<br />
+      Programas de educación, desarrollo social y apoyo comunitario
+    </address>
+  </div>
+
+  <form name="contacto-mqt" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contacto-mqt" />
+    <label>
+      Nombre
+      <input name="nombre" type="text" autocomplete="name" required />
+    </label>
+    <label>
+      Correo
+      <input name="correo" type="email" autocomplete="email" required />
+    </label>
+    <label>
+      Quiero apoyar como
+      <select name="tipo-apoyo" required>
+        <option value="">Seleccionar</option>
+        <option>Voluntario</option>
+        <option>Donante</option>
+        <option>Aliado institucional</option>
+        <option>Comunidad beneficiaria</option>
+      </select>
+    </label>
+    <label>
+      Mensaje
+      <textarea name="mensaje" rows="5" required></textarea>
+    </label>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>

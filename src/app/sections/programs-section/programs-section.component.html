@@ -1,0 +1,66 @@
+<section class="programs section" id="programas">
+  <div class="section-heading" appRevealOnScroll>
+    <div class="section-kicker">Programas</div>
+    <h2>Cinco rutas para que la ayuda no sea un momento, sino un proceso.</h2>
+  </div>
+
+  <div class="program-grid">
+    @for (program of programs; track program.title) {
+      <article class="program-card" appRevealOnScroll>
+        <div class="program-icon" aria-hidden="true">
+          @switch (program.icon) {
+            @case ('book-open') {
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M10 14c9 0 15 2 22 7 7-5 13-7 22-7v35c-9 0-15 2-22 7-7-5-13-7-22-7V14Z" />
+                <path d="M32 21v35" />
+                <path d="M17 24c4 .3 8 1.2 11 3" />
+                <path d="M47 24c-4 .3-8 1.2-11 3" />
+              </svg>
+            }
+            @case ('heart-hand') {
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M21 35 32 46l11-11c5-5 5-13 0-17-4-4-9-3-11 1-2-4-7-5-11-1-5 4-5 12 0 17Z" />
+                <path d="M8 44h9l8 8h16l15-12" />
+                <path d="M17 44l10-6 8 5" />
+              </svg>
+            }
+            @case ('people') {
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M32 34a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" />
+                <path d="M14 54c2-10 9-16 18-16s16 6 18 16" />
+                <path d="M14 31a7 7 0 1 0 0-14" />
+                <path d="M50 31a7 7 0 1 1 0-14" />
+                <path d="M6 49c1-7 5-11 11-13" />
+                <path d="M58 49c-1-7-5-11-11-13" />
+              </svg>
+            }
+            @case ('briefcase') {
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M14 23h36a6 6 0 0 1 6 6v18a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6V29a6 6 0 0 1 6-6Z" />
+                <path d="M24 23v-6h16v6" />
+                <path d="M8 36h48" />
+                <path d="M28 36h8" />
+              </svg>
+            }
+            @default {
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M32 8v14" />
+                <path d="M32 42v14" />
+                <path d="M8 32h14" />
+                <path d="M42 32h14" />
+                <path d="m15 15 10 10" />
+                <path d="m39 39 10 10" />
+                <path d="m49 15-10 10" />
+                <path d="m25 39-10 10" />
+                <path d="M32 22a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z" />
+              </svg>
+            }
+          }
+        </div>
+        <p>{{ program.summary }}</p>
+        <h3>{{ program.title }}</h3>
+        <span>{{ program.detail }}</span>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<section class="stories section">
+  <div class="section-kicker" appRevealOnScroll>Historias de transformación</div>
+  <div class="story-track" aria-label="Historias de impacto">
+    @for (story of stories; track story.name) {
+      <article appRevealOnScroll>
+        <span>{{ story.role }}</span>
+        <h2>{{ story.name }}</h2>
+        <p>{{ story.quote }}</p>
+      </article>
+    }
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="documents section" id="documentos">
+  <div class="section-heading" appRevealOnScroll>
+    <div class="section-kicker">Documentos</div>
+    <h2>Transparencia institucional en documentos claros y consultables.</h2>
+  </div>
+
+  <div class="document-grid">
+    @for (document of documents; track document.href) {
+      <article appRevealOnScroll>
+        <span>{{ document.date }}</span>
+        <h3>{{ document.title }}</h3>
+        <p>{{ document.summary }}</p>
+        <ul>
+          @for (highlight of document.highlights; track highlight) {
+            <li>{{ highlight }}</li>
+          }
+        </ul>
+        <a [href]="document.href" target="_blank" rel="noopener">Ver PDF completo</a>
+      </article>
+    }
+  </div>
+</section>

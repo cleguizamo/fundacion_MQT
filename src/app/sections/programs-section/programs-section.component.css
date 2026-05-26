@@ -1,0 +1,91 @@
+.programs {
+  color: #fff;
+  background: var(--ink);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1fr);
+  gap: 40px;
+  align-items: end;
+}
+
+.programs .section-kicker {
+  color: var(--sun);
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 46px;
+}
+
+.program-card {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  transition: transform 220ms ease, background 220ms ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.program-icon {
+  width: 68px;
+  height: 68px;
+  color: var(--sun);
+}
+
+.program-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.program-card p {
+  margin: auto 0 20px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+.program-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.32rem;
+  line-height: 1.12;
+}
+
+.program-card span {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+}
+
+@media (max-width: 1160px) {
+  .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .section-heading,
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+}
